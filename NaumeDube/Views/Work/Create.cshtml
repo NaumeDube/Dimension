@@ -1,0 +1,59 @@
+﻿@model NaumeDube.Models.Work
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Create</h1>
+
+<h4>Work</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="EnvironmentSatisfaction" class="control-label"></label>
+                <input asp-for="EnvironmentSatisfaction" class="form-control" />
+                <span asp-validation-for="EnvironmentSatisfaction" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OverTime" class="control-label"></label>
+                <input asp-for="OverTime" class="form-control" />
+                <span asp-validation-for="OverTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StandardHours" class="control-label"></label>
+                <input asp-for="StandardHours" class="form-control" />
+                <span asp-validation-for="StandardHours" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StockOptionLevel" class="control-label"></label>
+                <input asp-for="StockOptionLevel" class="form-control" />
+                <span asp-validation-for="StockOptionLevel" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TotalWorkingYears" class="control-label"></label>
+                <input asp-for="TotalWorkingYears" class="form-control" />
+                <span asp-validation-for="TotalWorkingYears" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="WorkLifeBalance" class="control-label"></label>
+                <input asp-for="WorkLifeBalance" class="form-control" />
+                <span asp-validation-for="WorkLifeBalance" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
